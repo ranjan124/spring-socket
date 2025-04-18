@@ -1,0 +1,20 @@
+networks:
+  shieldteq:
+
+services:
+  st-mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secret123
+    volumes:
+      - mongo01:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - shieldteq
+
+volumes:
+  mongo01:
+    driver: local

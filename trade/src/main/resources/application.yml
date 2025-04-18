@@ -1,15 +1,23 @@
 spring:
   application:
-    name: User
-  rsocket:
-    server:
-      port: 7071
+    name: trade
+
   data:
     mongodb:
       host: ${MONGO_HOST:localhost}
       port: 27017
-      database: user
+      database: trade
       username: admin
       password: secret123
       authentication-database: admin
       auto-index-creation: true
+stock:
+  service:
+    host: localhost
+    port: 7070
+
+user:
+  service:
+    host: localhost
+    port: 7071
+
