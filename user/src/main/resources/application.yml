@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: User
+  rsocket:
+    server:
+      port: 7071
